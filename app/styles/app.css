@@ -1,3 +1,17 @@
 h1 {
-	padding-left: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+h1.jumbotron {
+  background-color: #acb6d2;
+}
+
+.well {
+	background-color: #cdd3e4;
+	border-color: #acb6d2;
+}
+
+li strong {
+	font-size: 1.3em;
 }

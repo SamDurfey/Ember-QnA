@@ -2,6 +2,7 @@
 <ul>
 	{{#each model.questions as |question|}}
 		<li><strong> {{#link-to 'question' question.id}}{{question.title}}{{/link-to}} </strong></li>
+		<p>{{question.author}}</p>
 	{{/each}}
 </ul>
 

@@ -2,4 +2,11 @@
 <h3>{{model.title}}</h3>
 <p>{{model.question}}</p>
 
-{{new-answer}}
+<ul>
+	{{#each model.answers as |answer|}}
+		<li><strong>{{answer.answer}}</strong></li>
+		<p>~ {{answer.author}}</p>
+	{{/each}}
+</ul>
+
+{{new-answer saveAnswer='saveAnswer' question=model}}
