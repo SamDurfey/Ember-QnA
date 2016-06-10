@@ -1,1 +1,9 @@
+<h2>Questions:</h2>
+<ul>
+	{{#each model.questions as |question|}}
+		<li><strong> {{#link-to 'question' question.id}}{{question.title}}{{/link-to}} </strong></li>
+	{{/each}}
+</ul>
+
+
 {{new-question saveQuestion="saveQuestion"}}
