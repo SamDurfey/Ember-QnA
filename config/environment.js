@@ -5,7 +5,12 @@ module.exports = function(environment) {
     modulePrefix: 'ember-qn-a',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    // firebase: 'https://super-rentals.firebaseio.com/',
+    firebase: {
+      apiKey: "AIzaSyCXroaeZTlG1JDScZb3y7ddP9_MPgJcCUI",
+      authDomain: "ember-qna.firebaseapp.com",
+      databaseURL: "https://ember-qna.firebaseio.com",
+      storageBucket: "ember-qna.appspot.com",
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

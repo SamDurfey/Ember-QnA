@@ -1,1 +1,18 @@
-{{yield}}
+{{#if questionFormIsShowing}}
+	<h1>Write a new question!</h1>
+	<div>
+		<form>
+			<div class="form-group">
+			<label for="author">Author:</label>
+			{{input value=author id="author"}}
+			</div>
+			<div class="form-group">
+				<label for="question">Question:</label>
+				{{input value=question id="question"}}
+			</div>
+			<button class="btn-lg btn-success" {{action 'saveQuestion'}}>Save</button>
+		</form>
+	</div>
+{{else}}
+	<button class="btn-lg btn-default" {{action 'showQuestionForm'}}>Ask A New Question</button>
+{{/if}}
