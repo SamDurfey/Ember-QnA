@@ -1,8 +1,11 @@
 <h2>Question:</h2>
-<h3>{{model.title}}</h3>
-<p>{{model.question}}</p>
+<div class="jumbotron">
+	<h3>{{model.title}}</h3>
+	<p>{{model.body}}</p>
+</div>
 
-<ul>
+<h3>Answers:</h3>
+<ul class="jumbotron">
 	{{#each model.answers as |answer|}}
 		<li><strong>{{answer.answer}}</strong></li>
 		<p>~ {{answer.author}}</p>
@@ -10,3 +13,5 @@
 </ul>
 
 {{new-answer saveAnswer='saveAnswer' question=model}}
+
+{{edit-question question=model update="update"}}

@@ -1,0 +1,28 @@
+{{#if editFormIsShowing}}
+
+  <h4>Editing {{question.author}}'s Quesion:</h4>
+  <div>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="author">Author:</label>
+        {{input value=author id="author" placeholder=question.author class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title:</label>
+        {{input value=title id="title" placeholder=question.title class="form-control"}}
+
+      </div>
+    </form>
+
+    <div class="form-group">
+      <label for="body">Question:</label>
+      {{input value=body id="body" placeholder=question.body class="form-control"}}
+      {{log question}}
+    </div>
+
+    <button class="btn btn-warning" {{action 'update' question}}>Save</button>
+  </div>
+{{else}}
+  <button class="btn btn-warning" {{action 'showEditForm'}}>Edit This Question</button>
+{{/if}}
