@@ -12,6 +12,14 @@ h1.jumbotron {
 	border-color: #acb6d2;
 }
 
+.btn.outline {
+	background: none;
+}
+.btn-primary.outline {
+	border: 1px solid #0099cc;
+	color: #0099cc;
+}
+
 li strong {
 	font-size: 1.3em;
 }

@@ -1,7 +1,11 @@
 # Ember-QnA
-***Samuel Durfey, Epicodus, JavaScript Week 3***
+***Samuel Durfey, Epicodus, JavaScript Week ~~3~~ 4!***
 
 #### This is an app where users can ask questions, or answer other users' questions.
+## NEW STUFF:
+
+- #### You can now log in (using an Ember service). click login to make your username the author for questions/answers.
+- #### Computed values and helpers are used for number of times answered and answer timestamps.
 
 ## Prerequisites
 

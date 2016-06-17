@@ -1,16 +1,12 @@
 {{#if answerFormIsShowing}}
 	<h1>Answer this question!</h1>
 	<div>
-		<form class="form-inline">
+		<form>
 			<div class="form-group">
-				<label for="author">Author:</label>
-				{{input value=author id="author" class="form-control"}}
+				<label for="body">Answer:</label>
+				{{textarea value=body id="body" class="form-control" rows="3"}}
 			</div>
 		</form>
-		<div class="form-group">
-			<label for="body">Answer:</label>
-			{{textarea value=body id="body" class="form-control" rows="3"}}
-		</div>
 			<button class="btn-lg btn-success" {{action 'saveAnswer'}}>Submit Answer</button>
 		</div>
 {{else}}

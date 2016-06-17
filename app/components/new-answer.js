@@ -2,6 +2,7 @@ import Ember from 'ember';
 import moment from 'moment';
 
 export default Ember.Component.extend({
+	currentUser: Ember.inject.service(),
 	answerFormIsShowing: false,
 	actions: {
 		showAnswerForm() {
@@ -9,7 +10,7 @@ export default Ember.Component.extend({
 		},
 		saveAnswer() {
 			var params = {
-				author: this.get('author'),
+				author: this.get('currentUser.user'),
 				body: this.get('body'),
 				question: this.get('question'),
 				timeStamp: moment().format('h:mm a, MMMM Do, YYYY')
