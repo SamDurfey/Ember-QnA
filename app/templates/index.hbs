@@ -1,9 +1,7 @@
 <h2>Questions:</h2>
 <ul>
 	{{#each model.questions as |question|}}
-		<li><strong> {{#link-to "question" question.id}}{{question.title}}{{/link-to}} </strong></li>
-		<p>~ {{question.author}}.</p>
-		<p>This question has been answered {{question.answers.length}} time{{if question.hasMultipleAnswers "s"}}. {{unless question.answers "Be the first to answer it!"}}</p>
+		{{question-tile question=question}}
 	{{/each}}
 </ul>
 
