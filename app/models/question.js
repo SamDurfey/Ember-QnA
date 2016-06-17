@@ -7,4 +7,5 @@ export default Model.extend({
 	title: attr(),
 	body: attr(),
 	answers: hasMany('answer', { async: true }),
+	timeStamp: attr()
 });

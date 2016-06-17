@@ -2,13 +2,16 @@
 <div class="jumbotron">
 	<h3>{{model.title}}</h3>
 	<p>{{model.body}}</p>
+	<p><em> ~ {{model.author}}</em></p>
 </div>
+<p><em>Asked {{model.timeStamp}}</em></p>
 
 <h3>Answers:</h3>
 <ul class="jumbotron">
 	{{#each model.answers as |answer|}}
-		<li><strong>{{answer.answer}}</strong></li>
-		<p>~ {{answer.author}}</p>
+		<p>{{howLongAgo answer}}:</p>
+		<li><strong>{{answer.body}}</strong></li>
+		<p><em>~ {{answer.author}}</em></p>
 	{{/each}}
 </ul>
 

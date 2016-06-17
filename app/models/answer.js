@@ -4,6 +4,7 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
 	author: attr(),
-	answer: attr(),
-	question: belongsTo('question', { async: true })
+	body: attr(),
+	question: belongsTo('question', { async: true }),
+	timeStamp: attr()
 });
