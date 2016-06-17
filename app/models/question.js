@@ -7,7 +7,4 @@ export default Model.extend({
 	title: attr(),
 	body: attr(),
 	answers: hasMany('answer', { async: true }),
-	hasMultipleAnswers: function() {
-		return this.get('answers.length') !== 1;
-	}.property('answers')
 });
